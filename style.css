@@ -9,13 +9,13 @@ body {
 }
 
 a:link {
-    color: green;
-    text-decoration: none;
+    color: black;
+    text-decoration: bold;
 }
 
 a:visited {
-    color: green;
-    text-decoration: none;
+    color: black;
+    text-decoration: bold;
 }
 
 a:hover {
