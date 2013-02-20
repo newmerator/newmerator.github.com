@@ -87,7 +87,7 @@ li {
 
 #writing a:link {
     color: black;
-    text-decoration: underline;
+    text-decoration: bold;
 }
 
 #writing a:visited {
