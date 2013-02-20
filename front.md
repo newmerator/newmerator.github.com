@@ -1,1 +1,0 @@
-### Hi. I am David and I work at GitHub.
