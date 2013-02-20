@@ -34,8 +34,8 @@ h1 {
 h2 {
     color: black;
     font-size: 76px;
-     letter-spacing: -1px;
-    text-decoration: underline;
+    letter-spacing: -1px;
+    text-decoration: none;
 }
 
 h3 {
