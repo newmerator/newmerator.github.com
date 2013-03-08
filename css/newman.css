@@ -22,6 +22,12 @@ h1, h2, h3 {
   font-weight:normal;
   color:#000;
 }
+a img {
+  text-decoration: none;
+}
+div.imageBox {
+  float: left; margin-right: 10px; display:inline;
+}
 i, em {
   font-style:italic;
 }
@@ -341,9 +347,10 @@ ul.clean, ol.clean {
   position:relative;
   top:5px;
 }
-.about .follow-me a {
+.about a {
   text-decoration:none;
   color:#000;
+  display: inline;
 }
 .post-list dd {
   font-weight:bold;
