@@ -346,7 +346,6 @@ ul.clean, ol.clean {
 .about .twitter-follow-button {
   position:relative;
   top:5px;
-  vertical-align: middle;
 }
 .about a {
   text-decoration:none;
