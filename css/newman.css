@@ -16,6 +16,31 @@ body {
   max-width:900px;
 }
 
+/**
+*  Concert List Styles */
+#songkick {
+  width: 700px;
+  text-align: left;
+}
+
+#songkick li {
+  margin-top: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+#songkick li:hover a {
+  text-decoration: underline;
+}
+
+#songkick li .meta {
+  display: block;
+  font-size: 12px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+
 h1, h2, h3 {
   font-family:georgia, 'bitstream vera sans serif', 'lucida grande',
     helvetica, verdana, sans-serif;

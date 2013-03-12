@@ -117,10 +117,32 @@ var url = "http://api.songkick.com/api/3.0/users/newmerator/calendar.json?reason
 $.getJSON(url, function(data){
   $('#songkick').html('')
   $.each(data.resultsPage.results.calendarEntry, function(index, item) {
+    var date, venue;
+    var name = item.event.displayName.replace(/(.*) at (.*) \((.*)\)$/, function(_, nameMatch, venueMatch, dateMatch) {
+      date = dateMatch;
+      venue = venueMatch;
+      return nameMatch;
+    })
+
     var li = $("<li></li>")
-    var link = $("<a></a>")
+    var link = $("<a></a>", { target: '_blank' })
+    var dateSpan = $("<span></span>").addClass('date')
+    var venueSpan = $("<span></span>").addClass('venue')
+    var metaSpan = $("<span></span>").addClass('meta')
+    var nameSpan = $("<span></span>").addClass('name')
+
+    metaSpan.append(dateSpan)
+    metaSpan.append(" at ")
+    metaSpan.append(venueSpan)
+
+    dateSpan.text(date)
+    venueSpan.text(venue)
+    nameSpan.text(name)
+
     link.attr("href", item.event.uri)
-    link.text(item.event.displayName)
+    link.append(metaSpan)
+    link.append(nameSpan)
+    li.append(metaSpan)
     li.append(link)
     $('#songkick').append(li)
   })
@@ -144,4 +166,4 @@ $.getJSON(url, function(data){
 
 </body>
 
-	<!-- nakajima wuz here -->
+  <!-- nakajima wuz here -->
